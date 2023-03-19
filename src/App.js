@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Alert from './components/Alert';
 import NavBar from './components/NavBar';
 import TextForm from './components/TextForm';
+import AboutUs from './components/AboutUs';
 
 let App = (props) => {
   // We want to manage the complete project state from the main controller
@@ -57,12 +58,16 @@ let App = (props) => {
         aboutText="About Us"
         mode={mode}
         toggleMode={toggleMode}
-      /> 
+      />
       <Alert alert={alert} />
       <div className="container my-3">
-        <TextForm mode={mode} showAlert={showAlert} />
-        {/* <AboutUs/> */}
-        <Outlet />
+        <Routes>
+          <Route
+            path="/"
+            element={<TextForm mode={mode} showAlert={showAlert} />}
+          ></Route>
+          <Route path="/about" element={<AboutUs />}></Route>
+        </Routes>
       </div>
     </>
   );

@@ -1,31 +1,29 @@
-import React, { useState } from 'react';
-
 const AboutUs = () => {
-  const [darkmode, setDarkmode] = useState({
-    color: 'black',
-    backgroundColor: 'white',
-  });
+  // const [darkmode, setDarkmode] = useState({
+  //   color: 'black',
+  //   backgroundColor: 'white',
+  // });
 
-  const [btnText, setBtnText] = useState('Enable Dark Mode');
+  // const [btnText, setBtnText] = useState('Enable Dark Mode');
 
-  let enableDarkMode = () => {
-    if (darkmode.color === 'white') {
-      setDarkmode({
-        color: 'black',
-        backgroundColor: 'white',
-      });
-      setBtnText('Enable Dark Mode');
-    } else {
-      setDarkmode({
-        color: 'white',
-        backgroundColor: 'black',
-      });
-      setBtnText('Enable Light Mode');
-    }
-  };
+  // let enableDarkMode = () => {
+  //   if (darkmode.color === 'white') {
+  //     setDarkmode({
+  //       color: 'black',
+  //       backgroundColor: 'white',
+  //     });
+  //     setBtnText('Enable Dark Mode');
+  //   } else {
+  //     setDarkmode({
+  //       color: 'white',
+  //       backgroundColor: 'black',
+  //     });
+  //     setBtnText('Enable Light Mode');
+  //   }
+  // };
 
   return (
-    <div className="container my-3" style={darkmode}>
+    <div className="container my-3">
       <h3>About Us</h3>
       <div className="accordion" id="accordionExample">
         <div className="card">
@@ -111,7 +109,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <button
           type="button"
           className="btn btn-primary"
@@ -119,7 +117,7 @@ const AboutUs = () => {
         >
           {btnText}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
